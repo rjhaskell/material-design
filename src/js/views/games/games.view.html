@@ -1,0 +1,41 @@
+<h1 class="md-display-2">Game List</h1>
+<table flex class="table table-striped">
+    <thead>
+        <tr layout="row">
+            <th flex="20" class="md-title">Title</th>
+            <th flex="15" class="md-title">N. Amer. Release</th>
+            <th flex="15" class="md-title">EU Release</th>
+            <th flex="15" class="md-title">Publisher</th>
+            <th flex=50>
+                <md-button class="md-raised md-primary" ui-sref="GameCreate({ id: game.id})">
+                    <md-icon>build</md-icon>New Game</md-button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr layout="row" ng-repeat="game in vm.gameList | filter: { publisher: vm.filterData }">
+            <td flex="20">{{game.title}}</td>
+            <td flex="15">{{game.na_releaseDate | date: 'MMMM yyyy' | ifEmpty: 'Unreleased' }}</td>
+            <td flex="15">{{game.eu_releaseDate | date: 'MMMM yyyy' | ifEmpty: 'Unreleased' }}</td>
+            <td flex="15">{{game.publisher}}</td>
+            <td flex="50">
+                <md-button class="md-raised" ui-sref="GameDetail({ id: game.id })">
+                    <md-icon>visibility</md-icon>
+                    View
+                </md-button>
+
+                <md-button class="md-raised md-primary" ui-sref="GameEdit({ id: game.id })">
+                    <md-icon>create</md-icon>
+                    Edit
+                </md-button>
+
+                <md-button class="md-raised md-warn" ui-sref="GameDelete({ id: game.id })">
+                    <md-icon>remove</md-icon>
+                    Delete
+                </md-button>
+
+            </td>
+        </tr>
+    </tbody>
+
+</table>

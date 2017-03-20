@@ -1,0 +1,25 @@
+<h1>{{vm.game.title}}</h1>
+
+<md-list-item class="md-2-line">
+    <div class="md-list-item-text" layout="column">
+        <p>Publisher: {{vm.game.publisher}}</p>
+        <p>NA Release: {{vm.game.na_releaseDate | date: 'MMMM yyyy' | ifEmpty: 'Unreleased' }}</p>
+        <p>EU Release: {{vm.game.eu_releaseDate | date: 'MMMM yyyy' | ifEmpty: 'Unreleased' }}</p>
+        <p>Publisher: {{vm.game.publisher}}</p>
+    </div>
+</md-list-item>
+
+<div>
+    <md-content>
+        <md-button class="md-raised" ui-sref="Games">
+            <md-icon>arrow_back</md-icon>
+            Game List</md-button>
+        <md-button class="md-raised md-primary" ui-sref="GameEdit({id: vm.game.id})">
+            <md-icon>create</md-icon>
+            Edit</md-button>
+        <md-button class="md-raised md-warn" ui-sref="GameDelete({ id: game.id })">
+            <md-icon>remove</md-icon>
+            Delete
+        </md-button>
+    </md-content>
+</div>

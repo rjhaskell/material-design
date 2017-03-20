@@ -1,0 +1,28 @@
+<h1>Create New Game</h1>
+<form name="gameform" novalidate ng-submit="vm.newGame()">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input id="title" name="gametitle" class="form-control" type="text" ng-model="vm.game.title" ng-required="true" />
+        <span ng-show="gameform.gametitle.$touched && gameform.gametitle.$error.required" class="error">
+            Game Title is required!!!
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="na_releaseDate">NA Release Date:</label>
+        <input id="na_releaseDate" name="na_releaseDate" class="form-control" type="text" ng-model="vm.game.na_releaseDate" />
+    </div>
+    <div class="form-group">
+        <label for="eu_releaseDate">EU Release Date:</label>
+        <input id="eu_releaseDate" name="na_releaseDate" class="form-control" type="text" ng-model="vm.game.eu_releaseDate" />
+    </div>
+    <div class="form-group">
+        <label for="publisher">Publisher:</label>
+        <input id="publisher" class="form-control" type="text" ng-model="vm.game.publisher" ng-required="true"  />
+    </div>
+
+
+    <md-button class="md-raised" type="submit">
+        Save
+    </md-button>
+    <md-button class="md-raised md-warn" ui-sref="Games">Cancel</md-button>
+</form>

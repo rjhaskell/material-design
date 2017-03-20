@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <base href="/">
+    <title>Using material directives</title>
+    <!-- Third Party Styles -->
+    <link href="lib/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="lib/angular/angular-csp.css">
+
+    <!-- Application Styles -->
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+</head>
+
+<body>
+    <md-content class="md-padding">
+        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+            <md-nav-item md-nav-href="home" name="home"><md-icon>home</md-icon>
+            </md-nav-item>
+            <md-nav-item md-nav-href="games" name="games">
+                GAMES
+            </md-nav-item>
+            <md-nav-item md-nav-href="login" name="login"><md-icon>vpn_key</mdicon>
+            </md-nav-item>
+            <md-nav-item md-nav-href="secret" name="secret">
+                SECRET
+            </md-nav-item>
+            <md-nav-item md-nav-href="about" name="about">
+                ABOUT
+            </md-nav-item>
+        </md-nav-bar>
+    </md-content>
+
+    <ui-view></ui-view>
+
+
+
+    <!-- Third Party Scripts -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-material/angular-material.js"></script>
+    <script src="lib/angular-messages/angular-messages.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="js/models/userlogin.model.js"></script>
+    <script src="js/models/game.model.js"></script>
+
+    <script src="js/filters/ifemptyfilter.js"></script>
+    <script src="js/filters/filters.js"></script>
+
+    <script src="js/services/authentication.service.js"></script>
+    <script src="js/services/game.service.js"></script>
+    <script src="js/services/services.js"></script>
+
+    <script src="js/views/login/login.controller.js"></script>
+    <script src="js/views/login/login.config.js"></script>
+    <script src="js/views/login/login.js"></script>
+
+    <script src="js/views/secret/secret.controller.js"></script>
+    <script src="js/views/secret/secret.config.js"></script>
+    <script src="js/views/secret/secret.js"></script>
+
+    <script src="js/views/games/detail.controller.js"></script>
+    <!--<script src="js/views/games/edit.controller.js"></script>
+    <script src="js/views/games/delete.controller.js"></script>-->
+    <script src="js/views/games/games.controller.js"></script>
+    <script src="js/views/games/games.config.js"></script>
+    <script src="js/views/games/games.js"></script>
+
+    <script src="js/views/about/about.controller.js"></script>
+    <script src="js/views/about/about.config.js"></script>
+    <script src="js/views/about/about.js"></script>
+
+    <script src="js/views/home/home.controller.js"></script>
+    <script src="js/views/home/home.config.js"></script>
+    <script src="js/views/home/home.js"></script>
+
+    <script src="js/views/views.js"></script>
+
+    <script src="js/app.config.js"></script>
+    <script src="js/app.run.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
